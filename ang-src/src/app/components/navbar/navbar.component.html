@@ -1,4 +1,4 @@
-<div class="bs-component">
+<!-- <div class="bs-component">
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -25,3 +25,52 @@
     </div>
   </nav>
 </div>
+-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo fixed-top">
+  <mdb-navbar-brand>
+    <a class="navbar-brand" href="#">Lead Trust</a>
+  </mdb-navbar-brand>
+  <links>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a [routerLink]="['/']" class="nav-link waves-light" href="#" mdbWavesEffect>Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" *ngIf="authService.loggedIn()" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a class="nav-link waves-light" href="#" mdbWavesEffect [routerLink]="['/dashboard']">Dashboard</a>
+      </li>
+      <li class="nav-item" *ngIf="authService.loggedIn()" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a class="nav-link waves-light" href="#" mdbWavesEffect [routerLink]="['/profile']">Profile</a>
+      </li>
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+          Achievements<span class="caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Action</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Another action</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Something else here</a>
+          <div class="divider dropdown-divider"></div>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Separated link</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav nav-flex-icons ml-auto">
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+          dropdown<span class="caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary dropdown-menu-right" role="menu">
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Action</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Another action</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Something else here</a>
+          <div class="divider dropdown-divider"></div>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Separated link</a>
+        </div>
+      </li>
+    </ul>
+  </links> -->
+<!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->
+
+  
+

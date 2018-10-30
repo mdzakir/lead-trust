@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import {FormsModule} from '@angular/forms';
 import {RouterModule, Routes} from '@angular/router';
 
@@ -18,6 +19,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {AuthGuard} from './guards/auth.guard';
 import { CreatePostComponent } from './components/create-post/create-post.component';
 import { PostListComponent } from './components/post-list/post-list.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -37,12 +39,14 @@ const appRoutes: Routes = [
     DashboardComponent,
     ProfileComponent,
     CreatePostComponent,
-    PostListComponent
+    PostListComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    MDBBootstrapModule.forRoot(),
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
     ToastrModule.forRoot({
